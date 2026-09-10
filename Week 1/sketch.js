@@ -5,6 +5,8 @@ function setup() {
 
   function draw() {      
   background(150);
+  
+   strokeWeight(5);
 text ('1 Jeff',10,40); 
     text ('2',20,80);
     fill(0,0,0);
@@ -109,28 +111,28 @@ const startX = 800;
   const pixelSize = 20;
 
   const C = {
-    H: "#ff7700",
-    S: "#f2ba91",
+    H: "#d4711b",
+    S: "#c68e67",
     L: "#d49b73",
     d: "#b77d54",
     W: "#ffffff",
     E: "#2c9342",
     N: "#f07e9c",
-    M: "#442211",
+    M: "#442211", 
   };
 
   const steveGrid = [
     [C.H, C.H, C.H, C.H, C.H, C.H, C.H, C.H],
     [C.H, C.H, C.H, C.H, C.H, C.H, C.H, C.H],
     [C.H, C.H, C.H, C.H, C.S, C.S, C.H, C.H],
-    [C.H  , C.H, C.H, C.S, C.S, C.S, C.S, C.H],
+    [C.H, C.H, C.H, C.S, C.S, C.S, C.S, C.H],
     [C.S, C.W, C.E, C.S, C.S, C.E, C.W, C.S],
     [C.S, C.S, C.S, C.S, C.S, C.S, C.S, C.S],
     [C.S, C.S, C.S, C.N, C.N, C.S, C.S, C.S],
     [C.S, C.S, C.S, C.S, C.S, C.S, C.S, C.S],
   ];
 
-  noStroke();
+  strokeWeight(0);
 
   for (let row = 0; row < 8; row++) {
     for (let col = 0; col < 8; col++) {
@@ -140,16 +142,11 @@ const startX = 800;
       let y = startY + row * (pixelSize * 2);
 
       rect(x, y, pixelSize * 2, pixelSize * 2);
-   
-   
-   
-   
-   
     }
   }
+
+   strokeWeight(5);
+   fill(255,255,255,30)
+  square(550,100,200)
+  triangle(550,100,650,10,750,100)
 }
-
-
-
-fill (255,255,255,30)
-square (20,200,200)
