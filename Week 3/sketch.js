@@ -11,6 +11,10 @@ let v9 = 'gray'
 let player = 1
 
 
+
+let blueWon = 0
+let redWon = 0
+
 //v = vakje
 
 // 
@@ -30,10 +34,19 @@ function draw() {
 
   fill('blue')
   rect(190, 0, 190, 380)
+
+  if (player ==2 ||player == 4 || player == 6 || player == 8 || player == 10){
+  fill (0,0,0,100)  
+rect (0,0,190,380)
+  }
+if (player ==1 ||player == 3 || player == 5 || player == 7 || player == 9){
+  fill (0,0,0,100)  
+rect (190,0,190,380)
+}
   fill('white')
   rect(50, 50, 280, 280, 20)
 
-text(player, 20, 20)
+
 
 
 
@@ -187,21 +200,19 @@ text(player, 20, 20)
   textSize(20)
   text('restart', 160, 360)
 
-//text(player, 20, 20)
-
-
-
-
-
-
-
+ // text(player, 20, 20)
 
   //winconditions
-
+  
   //blue
   
+  if(player <= 9 || blueWon == 0 || redWon == 0){
+
+
+
+
   if (v1 != 'gray' && v1 != 170 && v2 != 'gray' && v2 != 170 && v3 != 'gray' && v3 != 170 && v4 != 'gray' && v4 != 170 && v5 != 'gray' && v5 != 170 &&
-    v6 != 'gray' && v6 != 170 && v7 != 'gray' && v7 != 170 && v8 != 'gray' && v8 != 170 && v9 != 'gray' && v9 != 170
+    v6 != 'gray' && v6 != 170 && v7 != 'gray' && v7 != 170 && v8 != 'gray' && v8 != 170 && v9 != 'gray' && v9 != 170 && blueWon == 0 && redWon == 0
   ) {
     fill(255)
     textSize(20)
@@ -224,42 +235,86 @@ text(player, 20, 20)
     strokeWeight(5)
     stroke(0)
     fill(0)
-    line (80,100,300,100)
+    line (80,100,300, 100)
+    blueWon = 1
   }
   if (v4 == 'blue' && v5 == 'blue' && v6 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+    strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (80,190,300, 190)
+    blueWon = 1
   }
   if (v7 == 'blue' && v8 == 'blue' && v9 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (80,280,300, 280)
+    blueWon = 1
   }
-  if (v1 == 'blue' && v4 == 'blue' && v7 == 'blue') {
+if (v1 == 'blue' && v4 == 'blue' && v7 == 'blue')  {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
-  }
+    player = 20
+   strokeWeight(5)
+    stroke(0)
+    fill(0)
+  line(100,100,100, 280)
+  blueWon = 1
+}
+     
   if (v2 == 'blue' && v5 == 'blue' && v8 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (190,100,190, 280)
+    blueWon = 1
   }
   if (v3 == 'blue' && v6 == 'blue' && v9 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (280,100,280, 280)
+    blueWon = 1
   }
   if (v1 == 'blue' && v5 == 'blue' && v9 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (100,100,280, 280)
+    blueWon = 1
   }
   if (v3 == 'blue' && v5 == 'blue' && v7 == 'blue') {
     fill(255)
     textSize(20)
     text('blue wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (280,100,100, 280)
+    blueWon = 1
   }
 
   //red
@@ -267,44 +322,91 @@ text(player, 20, 20)
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (80,100,300, 100)
+    redWon = 1
   }
   if (v4 == 'red' && v5 == 'red' && v6 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (80,190,300, 190)
+    redWon = 1
   }
   if (v7 == 'red' && v8 == 'red' && v9 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (80,280,300, 280)
+    redWon = 1
   }
   if (v1 == 'red' && v4 == 'red' && v7 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (100,100,100, 280)
+    redWon = 1
   }
   if (v2 == 'red' && v5 == 'red' && v8 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (190,100,190, 280)
   }
   if (v3 == 'red' && v6 == 'red' && v9 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (280,100,280, 280)
+    redWon = 1
   }
   if (v1 == 'red' && v5 == 'red' && v9 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (100,100,280, 280)
+    redWon = 1
   }
 
   if (v3 == 'red' && v5 == 'red' && v7 == 'red') {
     fill(255)
     textSize(20)
     text('red wins', 149, 40)
+    player = 20
+     strokeWeight(5)
+    stroke(0)
+    fill(0)
+    line (280,100,100, 280)
+    redWon = 1
   }
-
+ }
 }
 function changeTurn()
 {
@@ -339,7 +441,7 @@ function mouseClicked() {
 
   
 
-  if (player == 1 || player == 3 || player == 5 || player == 7|| player == 9) {
+  if (player == 1 || player == 3 || player == 5 || player == 7|| player == 9 || player == 11) {
     if (mouseX >= 60 && mouseX <= 140 && mouseY >= 60 && mouseY <= 140 && v1 == 170) {
       v1 = 'red'
       changeTurn();
@@ -425,94 +527,7 @@ function mouseClicked() {
     v7 = 'gray'
     v8 = 'gray'
     v9 = 'gray'
+    blueWon = 0
+    redWon = 0
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
-
-
-
-
-
-
